@@ -1,0 +1,19 @@
+{
+  "name": "threejs-gui-crosshair",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Tomasz Dysinski <oz@bunnybones.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "three.js": "*"
+  }
+}
