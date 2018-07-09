@@ -1,6 +1,6 @@
 {
   "name": "threejs-gui-crosshair",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A crosshair GUI element. Great for aiming in first person interfaces.",
   "main": "index.js",
   "license": "MIT",
@@ -9,16 +9,18 @@
     "email": "oz@bunnybones.com",
     "url": "https://github.com/bunnybones1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "three": "^0.94.0"
+  },
   "devDependencies": {
+    "budo": "^11.3.2",
     "input-mouse": "^3.0.4",
-    "loadandrunscripts": "^1.0.0",
-    "threejs-camera-controller-first-person-desktop": "^1.4.0",
-    "threejs-gui-scene": "^1.1.0",
-    "threejs-managed-view": "^2.4.0"
+    "threejs-camera-controller-first-person-desktop": "^5.0.1",
+    "threejs-gui-scene": "^3.0.0",
+    "threejs-managed-view": "^7.0.0"
   },
   "scripts": {
-    "test": "beefy test.js --live --open"
+    "test": "budo test.js --live --open"
   },
   "keywords": [
     "threejs",

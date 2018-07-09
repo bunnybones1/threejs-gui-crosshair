@@ -1,7 +1,8 @@
+var three = require('three');
 function Crosshair() {
-	var geometry = new THREE.Geometry();
-	var white = new THREE.Color(1, 1, 1);
-	var black = new THREE.Color(0, 0, 0);
+	var geometry = new three.Geometry();
+	var white = new three.Color(1, 1, 1);
+	var black = new three.Color(0, 0, 0);
 
 	var petals = 8;
 
@@ -11,12 +12,12 @@ function Crosshair() {
 		var ratio = iPetal / petals;
 		var angle = ratio * Math.PI * 2;
 
-		geometry.vertices.push(new THREE.Vector3(
+		geometry.vertices.push(new three.Vector3(
 			Math.cos(angle) * radiusInner,
 			Math.sin(angle) * radiusInner,
 			0
 		));
-		geometry.vertices.push(new THREE.Vector3(
+		geometry.vertices.push(new three.Vector3(
 			Math.cos(angle) * radiusOuter,
 			Math.sin(angle) * radiusOuter,
 			0
@@ -27,17 +28,16 @@ function Crosshair() {
 		geometry.colors.push(odd ? white : black);
 	}
 
-	THREE.Line.call(
+	three.LineSegments.call(
 		this,
 		geometry, 
-		new THREE.LineBasicMaterial({
+		new three.LineBasicMaterial({
 			color: 0xffffff,
 			vertexColors: true
-		}),
-		THREE.LinePieces
+		})
 	);
 }
 
-Crosshair.prototype = Object.create(THREE.Line.prototype);
+Crosshair.prototype = Object.create(three.LineSegments.prototype);
 
 module.exports = Crosshair;
